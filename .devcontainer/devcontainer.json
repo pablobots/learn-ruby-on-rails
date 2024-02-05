@@ -1,0 +1,32 @@
+{
+	"name": "Ruby on Rails (Community)",
+	"build": {
+		"dockerfile": "Dockerfile",
+        "context": ".."
+	},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+            "settings": {
+				"terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                    "bash": {
+                        "path": "bash"
+                        }
+                },
+
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"rebornix.Ruby",
+                // "castwide.solargraph",
+                "dbaeumer.vscode-eslint"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [3000]
+    }
+}
